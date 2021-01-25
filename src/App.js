@@ -12,7 +12,6 @@ import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 import { setCurrentUser } from './redux/user/user.actions';
 
 class App extends React.Component {
-
   unsubscribeFromAuth = null;
 
   componentDidMount() {
@@ -29,9 +28,8 @@ class App extends React.Component {
           });
         });
       }
-      else {
-          setCurrentUser(userAuth);
-        }
+
+      setCurrentUser(userAuth);
     });
   }
 
@@ -57,4 +55,7 @@ const mapDispatchToProps = dispatch => ({
   setCurrentUser: user => dispatch(setCurrentUser(user))
 });
 
-export default connect(null, mapDispatchToProps)(App);
+export default connect(
+  null,
+  mapDispatchToProps
+)(App);
