@@ -36,11 +36,11 @@ const Header = ({ currentUser, hidden }) => (
       )}
       <CartIcon />
     </div>
-    { hidden ? null : <CartDropdown /> }
+    {hidden ? null : <CartDropdown />}
   </div>
 );
 
-const mapStateToProps = createStructuredSelector ({
+const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser,
   hidden: selectCartHidden
 });
