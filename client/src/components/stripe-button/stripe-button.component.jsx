@@ -7,22 +7,23 @@ const StripeCheckoutButton = ({ price }) => {
   const publishableKey = 'pk_test_51He4xkG8Gl4cuFbNehiyPmPhhFjRh3i7w7kwPeqnno4MM9ETl1xJXZ9buJxVnu3iPeRx5XaXpIUr1UyES7FVqSfu00ePl4ICej';
 
   const onToken = token => {
-    console.log(token);
     axios({
       url: 'payment',
       method: 'post',
       data: {
         amount: priceForStripe,
-        token
+        token: token
       }
-    }).then(response => {
-      alert('Payment successful')
-    }).catch(error => {
-      console.log('Payment error: ', JSON.parse(error));
-      alert(
-        'There was an issue with your payment. Please sure you use the provided credit card.'
-      );
-    });
+    })
+      .then(response => {
+        alert('succesful payment');
+      })
+      .catch(error => {
+        console.log('Payment Error: ', error);
+        alert(
+          'There was an issue with your payment! Please make sure you use the provided credit card.'
+        );
+      });
   };
 
   return (
