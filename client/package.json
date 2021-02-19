@@ -2,7 +2,9 @@
   "name": "complete-react-course",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:5000",
   "dependencies": {
+    "axios": "^0.21.1",
     "firebase": "^8.2.4",
     "node-sass": "^4.0.0",
     "react": "^16.8.6",
