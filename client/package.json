@@ -5,6 +5,8 @@
   "proxy": "http://localhost:5000",
   "dependencies": {
     "axios": "^0.21.1",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
     "firebase": "^8.2.4",
     "node-sass": "^4.0.0",
     "react": "^16.8.6",
@@ -13,6 +15,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "2.1.8",
     "react-stripe-checkout": "^2.6.3",
+    "react-test-renderer": "^17.0.1",
     "redux": "^4.0.5",
     "redux-logger": "^3.0.6",
     "redux-persist": "^6.0.0",

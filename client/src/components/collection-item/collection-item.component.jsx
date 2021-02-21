@@ -10,9 +10,9 @@ import {
   BackgroundImage,
   NameContainer,
   PriceContainer
-} from './collection-styles.styles';
+} from './collection-item.styles';
 
-const CollectionItem = ({ item, addItem }) => {
+export const CollectionItem = ({ item, addItem }) => {
   const { name, price, imageUrl } = item;
 
   return (
